@@ -17,4 +17,9 @@ public class ContratService {
     public List<Contrat> getAll(){
         return contratRepository.findAll();
     }
+
+    public Contrat get(Long id){
+        return contratRepository.findById(id)
+        .orElseThrow(() -> new RuntimeException("Contrat not found"));
+    }
 }
