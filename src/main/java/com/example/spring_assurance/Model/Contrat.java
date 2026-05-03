@@ -5,7 +5,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 
 @Entity
-public class User {
+public class Contrat {
 
     @Id
     @GeneratedValue
@@ -19,10 +19,10 @@ public class User {
     private Integer prime;
     private String echeance;
 
-    protected User() {
+    protected Contrat() {
     }
 
-    public User(String numero, String titre, String type, String statut, String titulaire, Integer prime,
+    public Contrat(String numero, String titre, String type, String statut, String titulaire, Integer prime,
             String echeance) {
         this.numero = numero;
         this.titre = titre;
@@ -33,7 +33,7 @@ public class User {
         this.echeance = echeance;
     }
 
-    public User(Long id, String numero, String titre, String type, String statut, String titulaire, Integer prime,
+    public Contrat(Long id, String numero, String titre, String type, String statut, String titulaire, Integer prime,
             String echeance) {
         this(numero, titre, type, statut, titulaire, prime, echeance);
         this.id = id;
