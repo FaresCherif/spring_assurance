@@ -25,6 +25,9 @@ public class ContratService {
 
     public List<Contrat> getByStatut(String statut){
         return contratRepository.findByStatut(statut);
+    }
 
+    public Contrat save(Contrat contrat){
+        return contratRepository.save(contrat);
     }
 }
