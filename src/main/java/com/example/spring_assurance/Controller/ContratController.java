@@ -27,4 +27,9 @@ public class ContratController {
     public Contrat get(@PathVariable Long id){
         return contratService.get(id);
     }
+
+    @GetMapping("/statut/{statut}")
+    public List<Contrat> getByStatut(@PathVariable String statut){
+        return contratService.getByStatut(statut);
+    }
 }

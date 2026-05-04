@@ -22,4 +22,9 @@ public class ContratService {
         return contratRepository.findById(id)
         .orElseThrow(() -> new RuntimeException("Contrat not found"));
     }
+
+    public List<Contrat> getByStatut(String statut){
+        return contratRepository.findByStatut(statut);
+
+    }
 }
