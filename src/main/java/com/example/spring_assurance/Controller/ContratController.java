@@ -41,8 +41,8 @@ public class ContratController {
         return contratService.save(contrat);
     }
 
-    @DeleteMapping("/delete")
-    public void contrat(@RequestBody Long id_contrat){
-        contratService.delete(id_contrat);
+    @DeleteMapping("/{id}")
+    public void delete(@PathVariable Long id){
+        contratService.delete(id);
     }
 }
