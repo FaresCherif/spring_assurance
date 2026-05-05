@@ -30,4 +30,8 @@ public class ContratService {
     public Contrat save(Contrat contrat){
         return contratRepository.save(contrat);
     }
+
+    public void delete(Long id_contrat){
+        contratRepository.deleteById(id_contrat);
+    }
 }
