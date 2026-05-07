@@ -9,4 +9,5 @@ import com.example.spring_assurance.Model.Contrat;
 public interface ContratRepository extends JpaRepository<Contrat,Long> {
     
     List<Contrat> findByStatut(String statut);
+    List<Contrat> findAllByOrderByStatutAsc();
 }

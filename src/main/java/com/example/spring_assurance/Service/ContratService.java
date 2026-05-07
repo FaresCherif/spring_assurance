@@ -15,7 +15,7 @@ public class ContratService {
     private ContratRepository contratRepository;
 
     public List<Contrat> getAll(){
-        return contratRepository.findAll();
+        return contratRepository.findAllByOrderByStatutAsc();
     }
 
     public Contrat get(Long id){
