@@ -15,6 +15,8 @@ import org.springframework.web.bind.annotation.RestController;
 import com.example.spring_assurance.Model.Contrat;
 import com.example.spring_assurance.Service.ContratService;
 
+import jakarta.validation.Valid;
+
 @RestController
 @RequestMapping("/contrat")
 public class ContratController {
@@ -38,7 +40,7 @@ public class ContratController {
     }
 
     @PostMapping("/add")
-    public Contrat add(@RequestBody Contrat contrat){
+    public Contrat add(@Valid @RequestBody Contrat contrat){
         return contratService.save(contrat);
     }
 
@@ -48,7 +50,7 @@ public class ContratController {
     }
 
     @PutMapping("/update")
-    public Contrat update(@RequestBody Contrat contrat){
+    public Contrat update(@Valid @RequestBody Contrat contrat){
         return contratService.save(contrat);
     }
 }

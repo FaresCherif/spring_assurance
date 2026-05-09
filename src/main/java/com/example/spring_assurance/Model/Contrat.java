@@ -1,8 +1,12 @@
 package com.example.spring_assurance.Model;
 
+import org.antlr.v4.runtime.misc.NotNull;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
+import jakarta.validation.constraints.Future;
+import jakarta.validation.constraints.Positive;
 
 @Entity
 public class Contrat {
@@ -16,7 +20,11 @@ public class Contrat {
     private String type;
     private String statut;
     private String titulaire;
+
+    @Positive
     private Integer prime;
+
+    @Future
     private String echeance;
 
     protected Contrat() {
