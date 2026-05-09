@@ -23,8 +23,6 @@ public class Contrat {
 
     @Positive
     private Integer prime;
-
-    @Future
     private String echeance;
 
     protected Contrat() {
